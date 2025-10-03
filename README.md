@@ -50,12 +50,34 @@ variable "each_vm" {
 5. Используйте функцию file в local-переменной для считывания ключа ~/.ssh/id_rsa.pub и его последующего использования в блоке metadata, взятому из ДЗ 2.
 6. Инициализируйте проект, выполните код.
 
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_3.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_4.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_5.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_6.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_7.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_8.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_9.png)
+
 ------
 
 ### Задание 3
 
 1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле **disk_vm.tf** .
 2. Создайте в том же файле **одиночную**(использовать count или for_each запрещено из-за задания №4) ВМ c именем "storage"  . Используйте блок **dynamic secondary_disk{..}** и мета-аргумент for_each для подключения созданных вами дополнительных дисков.
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_11.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_12.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_13.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_14.png)
 
 ------
 
@@ -81,6 +103,10 @@ storage ansible_host=<внешний ip-адрес> fqdn=<полное доме�
 ```
 Пример fqdn: ```web1.ru-central1.internal```(в случае указания переменной hostname(не путать с переменной name)); ```fhm8k1oojmm5lie8i22a.auto.internal```(в случае отсутвия перменной hostname - автоматическая генерация имени,  зона изменяется на auto). нужную вам переменную найдите в документации провайдера или terraform console.
 4. Выполните код. Приложите скриншот получившегося файла. 
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_16.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-03/main/Screenshot_15.png)
 
 Для общего зачёта создайте в вашем GitHub-репозитории новую ветку terraform-03. Закоммитьте в эту ветку свой финальный код проекта, пришлите ссылку на коммит.   
 **Удалите все созданные ресурсы**.
