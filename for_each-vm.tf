@@ -1,5 +1,4 @@
 resource "yandex_compute_instance" "for_each" {
-  depends_on = [yandex_compute_instance.web]
   for_each = { for i in var.vm_resources : i.vm_name => i }
   name          = each.value.vm_name
 
