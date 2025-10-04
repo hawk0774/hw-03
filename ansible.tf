@@ -4,5 +4,5 @@ resource "local_file" "hosts_cfg" {
     databases = yandex_compute_instance.for_each
     storage = [yandex_compute_instance.storage]}
   )
-  filename = "${abspath(path.module)}/hosts.cfg"
+  filename = "${abspath(path.module)}/hosts.ini"
 }
