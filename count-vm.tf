@@ -3,6 +3,7 @@ data "yandex_compute_image" "ubuntu-2004-lts" {
 }
 
 resource "yandex_compute_instance" "web" {
+  depends_on = [ ]
   count       = var.yandex_compute_instance_web[0].count_vms
   name        = "${var.yandex_compute_instance_web[0].vm_name}-${count.index + 1}" 
   platform_id = var.yandex_compute_instance_web[0].platform_id
